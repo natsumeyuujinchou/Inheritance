@@ -1,14 +1,21 @@
 class Vehicle {
     protected String brand;
     protected int speed;
+    protected double fuel;
 
     public Vehicle(String brand, int speed) {
         this.brand = brand;
         this.speed = speed;
+        this.fuel = fuel;
+    }
+      public void refuel(double amount) {
+        fuel += amount;
+        System.out.println("Refueled " + amount + "L. Total fuel: " + fuel + "L");
     }
 
-    public void displayInfo() {
-        System.out.println("Brand: " + brand + ", Speed: " + speed + " km/h");
+
+   public void displayInfo() {
+        System.out.println("Brand: " + brand + ", Speed: " + speed + " km/h, Fuel: " + fuel + "L");
     }
 }
 
